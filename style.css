@@ -5,7 +5,8 @@
 }
 :root {
   --nav-color: #f8f9fd;
-  --widht-section: 70%;
+  --width-section: 70%;
+  --width-section-mobile: 90%;
 }
 main {
   background-color: #f8f9fd;
@@ -243,7 +244,7 @@ nav button {
 
 #hero .carousel {
   margin: 5em auto 1em;
-  width: var(--widht-section);
+  width: var(--width-section);
   display: flex;
   overflow-x: auto;
   mask-image: linear-gradient(
@@ -262,6 +263,11 @@ nav button {
     transparent
   );
 }
+
+@media screen  {
+  
+}
+
 #hero .carousel::-webkit-scrollbar {
   display: none;
 }
@@ -305,7 +311,7 @@ nav button {
 
 /* ---------- MEETING SECTION --------- */
 section {
-  width: var(--widht-section);
+  width: var(--width-section);
   margin: 0 auto;
   padding-bottom: 5em;
 }
