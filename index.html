@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Transcriber</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +17,20 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+        <link
+      rel="icon"
+      href="/img/favicon-light-mode.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Dark Mode -->
+    <link
+      rel="icon"
+      href="/img/favicon-dark-mode.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,32 +40,66 @@
         <img src="./img/transcriber-logo.svg" alt="" />
       </div>
       <ul>
-        <li><a href="">Product</a></li>
-        <li><a href="">Resource</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="">Costumers</a></li>
-        <li><a href="">Talk to Sales</a></li>
+        <li><a href="#hero">Product</a></li>
+        <li><a href="#meeting">Resource</a></li>
+        <li><a href="#ai-teammate">Pricing</a></li>
+        <li><a href="#knowledge">Costumers</a></li>
+        <li><a href="#integrations">Talk to Sales</a></li>
       </ul>
       <div class="auth-group">
         <button class="login-btn">Log in</button>
         <button class="signup-btn">Sign up<span></span></button>
+      </div>
+      <input
+        class="mobile-menu-toggle"
+        id="mobile-menu-toggle"
+        type="checkbox"
+      />
+      <label
+        class="hamburger"
+        for="mobile-menu-toggle"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+        >
+          <path d="M0 0h16v16H0z" fill="none" />
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="m2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+          />
+        </svg>
+      </label>
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#hero">Product</a></li>
+          <li><a href="#meeting">Resource</a></li>
+          <li><a href="#ai-teammate">Pricing</a></li>
+          <li><a href="#knowledge">Costumers</a></li>
+          <li><a href="#integrations">Talk to Sales</a></li>
+        </ul>
+        <div class="auth-group">
+          <button class="login-btn">Log in</button>
+          <button class="signup-btn">Sign up</button>
+        </div>
       </div>
     </nav>
 
     <main>
       <!-- --------- HERO SECTION -------- -->
       <section id="hero">
-        <div class="achivement">
-          <div class="badge"><p>P</p></div>
-          <div class="detail">
-            <p class="rank">#2 PRODUCT OF THE WEEK</p>
-            <p class="achivement-name">Artificial Intelligence</p>
-          </div>
-        </div>
+        <img class="badge" src="img/badge.svg" alt="" />
         <h1>The final<br /><span>meeting platform</span></h1>
         <p>
           Create tasks and docs with AI and your team in real time. Every call
-          ends with <br />progress.
+          ends with progress.
         </p>
         <div class="btn-group">
           <button class="btn-demo">Book a demo</button>
@@ -61,17 +110,17 @@
             <li class="card"><img src="./img/logo-1.png" alt="" /></li>
             <li class="card"><img src="./img/logo-2.png" alt="" /></li>
             <li class="card"><img src="./img/logo-3.png" alt="" /></li>
-            <li class="card">4</li>
-            <li class="card">5</li>
-            <li class="card">6</li>
+            <li class="card"><img src="./img/brand-3.svg" alt="" /></li>
+            <li class="card"><img src="./img/brand-4.svg" alt="" /></li>
+            <li class="card"><img src="./img/brand-5.svg" alt="" /></li>
           </ul>
           <ul aria-hidden="true" class="group">
             <li class="card"><img src="./img/logo-1.png" alt="" /></li>
             <li class="card"><img src="./img/logo-2.png" alt="" /></li>
             <li class="card"><img src="./img/logo-3.png" alt="" /></li>
-            <li class="card">4</li>
-            <li class="card">5</li>
-            <li class="card">6</li>
+            <li class="card"><img src="./img/brand-3.svg" alt="" /></li>
+            <li class="card"><img src="./img/brand-4.svg" alt="" /></li>
+            <li class="card"><img src="./img/brand-5.svg" alt="" /></li>
           </ul>
         </div>
       </section>
@@ -80,12 +129,11 @@
       <section id="meeting">
         <p class="section-name">Meeting Spaces</p>
         <h2 class="section-title">
-          Every meeting, recording, and action <br />in one place
+          Every meeting, recording, and action in one place
         </h2>
         <p class="description">
           Transcriber organises meetings into spaces with recordings, knowledge,
-          and follow-ups so you and your AI <br />teammate can act without
-          delay.
+          and follow-ups so you and your AI teammate can act without delay.
         </p>
 
         <ul class="category-container">
@@ -223,7 +271,7 @@
         <h2 class="section-title">Where business knowledge comes alive</h2>
         <p class="description">
           Transcriber connects company knowledge and past meetings, so your team
-          always has clear answers with <br />the right context
+          always has clear answers with the right context
         </p>
         <ul class="checklist">
           <li>Combines knowledge and meetings for answer</li>
@@ -236,12 +284,7 @@
             <p>Waking Up...</p>
             <div class="btn-container">
               <button>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1.3em"
-                  height="1.3em"
-                  viewBox="0 0 24 24"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path
                     fill="none"
@@ -318,7 +361,7 @@
         <h2 class="section-title">Where context and meetings connect</h2>
         <p class="description">
           Transcriber connects company knowledge and past meetings, so your team
-          always has clear answers with <br />the right context.
+          always has clear answers with the right context.
         </p>
         <ul class="checklist">
           <li>Combines knowledge and meetings for answer</li>
@@ -327,9 +370,10 @@
         </ul>
 
         <div class="container">
+          <img class="bg" src="img/bg-knowledge.png" alt="" />
           <div class="i1"></div>
           <div class="i2"></div>
-          <img src="img/img-knowledge.svg" alt="" />
+          <img class="main" src="img/img-knowledge.svg" alt="" />
         </div>
 
         <div class="brand-container">
@@ -347,7 +391,7 @@
         <h2 class="section-title">Where decisions turn into action</h2>
         <p class="description">
           Transcriber takes decisions and context from meetings and knowledge,
-          then carries out the right actions <br />across your tech stack
+          then carries out the right actions across your tech stack
           automatically
         </p>
         <ul class="category-container">
@@ -464,113 +508,188 @@
           <a href="mailto:suppport@transcriber.co">suppport@transcriber.co</a>
         </p>
         <div class="accordion-container">
-          <button class="accordion">Section 1</button>
-          <div class="panel">
+          <details class="faq-item">
+            <summary>Does transcriber work with Zoom or Google Meet?</summary>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
+          </details>
 
-          <button class="accordion">Section 2</button>
-          <div class="panel">
+          <details class="faq-item">
+            <summary>
+              What makes Transcriber different from AI note-takers?
+            </summary>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
+          </details>
 
-          <button class="accordion">Section 3</button>
-          <div class="panel">
+          <details class="faq-item">
+            <summary>
+              Does Transcriber show up as a participant in my meetings?
+            </summary>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-          </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Can Transcriber connect with the tools we already use?
+            </summary>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I try Transcriber for free?</summary>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is Transcriber secure for sensitive calls?</summary>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Can I ask Transcriber questions outsied of meetings?
+            </summary>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </details>
         </div>
       </section>
-
     </main>
     <footer>
-        <div class="card">
-          <img src="img/pfp-person.svg" alt="" />
-          <div class="inner-container">
-            <div>
-              <h3 class="cta">Ready to take meetings <br><span>to the next level?</span></h3>
-              <p class="description">Try Transcriber for a few meetings today. It's free to get <br>started.</p>
-              <div class="button-container">
-                <button class="footer-signup-btn">Sign up</button>
-                <button class="footer-book-btn">Book a demo</button>
-              </div>
-            </div>
-            <div>
-              <h4 class="list-title">What we'll cover on our demo</h4>
-              <ul class="footer-checklist">
-                <li>Automatic notes and follow-ups from every call</li>
-                <li>All meetings, docs, and decisions in one place</li>
-                <li>How Transcriber saves teams hours each week</li>
-                <li>Quick demo of the platform</li>
-              </ul>
+      <div class="card">
+        <img src="img/pfp-person.svg" alt="" />
+        <div class="inner-container">
+          <div>
+            <h3 class="cta">
+              Ready to take meetings <br /><span>to the next level?</span>
+            </h3>
+            <p class="description">
+              Try Transcriber for a few meetings today. It's free to get
+              <br />started.
+            </p>
+            <div class="button-container">
+              <button class="footer-signup-btn">Sign up</button>
+              <button class="footer-book-btn">Book a demo</button>
             </div>
           </div>
+          <div>
+            <h4 class="list-title">What we'll cover on our demo</h4>
+            <ul class="footer-checklist">
+              <li>Automatic notes and follow-ups from every call</li>
+              <li>All meetings, docs, and decisions in one place</li>
+              <li>How Transcriber saves teams hours each week</li>
+              <li>Quick demo of the platform</li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div class="container">
-          <div class="trademark">
-            <div class="logo"><img src="./img/transcriber-logo-white.svg" alt=""></div>
-            <div class="inner-container">
-              <ul class="social-media">
-                <li><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiNmOGY5ZmQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMi44MzhBMS44NCAxLjg0IDAgMCAxIDIuODM4IDFIMjEuMTZBMS44MzcgMS44MzcgMCAwIDEgMjMgMi44MzhWMjEuMTZBMS44NCAxLjg0IDAgMCAxIDIxLjE2MSAyM0gyLjgzOEExLjg0IDEuODQgMCAwIDEgMSAyMS4xNjF6bTguNzA4IDYuNTVoMi45Nzl2MS40OTZjLjQzLS44NiAxLjUzLTEuNjM0IDMuMTgzLTEuNjM0YzMuMTY5IDAgMy45MiAxLjcxMyAzLjkyIDQuODU2djUuODIyaC0zLjIwN3YtNS4xMDZjMC0xLjc5LS40My0yLjgtMS41MjItMi44Yy0xLjUxNSAwLTIuMTQ1IDEuMDg5LTIuMTQ1IDIuOHY1LjEwNkg5LjcwOHptLTUuNSAxMC40MDNoMy4yMDhWOS4yNUg0LjIwOHpNNy44NzUgNS44MTJhMi4wNjMgMi4wNjMgMCAxIDEtNC4xMjUgMGEyLjA2MyAyLjA2MyAwIDAgMSA0LjEyNSAwIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPgo=" alt=""></li>
-                <li><img src="./img/X_logo_2023.svg" alt=""></li>
-              </ul>
-              <p>&copy; 2025 Seeking Sigma Inc. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="trademark">
+          <div class="logo">
+            <img src="./img/transcriber-logo-white.svg" alt="" />
           </div>
+          <div class="inner-container">
+            <ul class="social-media">
+              <li>
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgLz4KCTxwYXRoIGZpbGw9IiNmOGY5ZmQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMi44MzhBMS44NCAxLjg0IDAgMCAxIDIuODM4IDFIMjEuMTZBMS44MzcgMS44MzcgMCAwIDEgMjMgMi44MzhWMjEuMTZBMS44NCAxLjg0IDAgMCAxIDIxLjE2MSAyM0gyLjgzOEExLjg0IDEuODQgMCAwIDEgMSAyMS4xNjF6bTguNzA4IDYuNTVoMi45Nzl2MS40OTZjLjQzLS44NiAxLjUzLTEuNjM0IDMuMTgzLTEuNjM0YzMuMTY5IDAgMy45MiAxLjcxMyAzLjkyIDQuODU2djUuODIyaC0zLjIwN3YtNS4xMDZjMC0xLjc5LS40My0yLjgtMS41MjItMi44Yy0xLjUxNSAwLTIuMTQ1IDEuMDg5LTIuMTQ1IDIuOHY1LjEwNkg5LjcwOHptLTUuNSAxMC40MDNoMy4yMDhWOS4yNUg0LjIwOHpNNy44NzUgNS44MTJhMi4wNjMgMi4wNjMgMCAxIDEtNC4xMjUgMGEyLjA2MyAyLjA2MyAwIDAgMSA0LjEyNSAwIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPgo="
+                  alt=""
+                />
+              </li>
+              <li><img src="./img/X_logo_2023.svg" alt="" /></li>
+            </ul>
+            <p>&copy; 2025 Seeking Sigma Inc. All rights reserved.</p>
+          </div>
+        </div>
+        <details class="footer-links">
+          <summary>Product</summary>
           <ul>
-            <li><span class="title">Product</span></li>
-            <li>AI Teammates</li>
-            <li>Meetings</li>
-            <li>Integrations</li>
-            <li>Changelog</li>
+            <li><a href="">AI Teammates</a></li>
+            <li><a href="">Meetings</a></li>
+            <li><a href="">Integrations</a></li>
+            <li><a href="">Changelog</a></li>
           </ul>
+        </details>
+        <div class="footer-links-desktop">
+          <p>Product</p>
           <ul>
-            <li><span class="title">Resources</span></li>
-            <li>Blog</li>
-            <li>Customers</li>
-            <li>Enterprise</li>
-            <li>Help Center</li>
-          </ul>
-          <ul>
-            <li><span class="title">Company</span></li>
-            <li>Careers</li>
-            <li>Legal</li>
-            <li>Status</li>
-            <li>Contact</li>
+            <li><a href="">AI Teammates</a></li>
+            <li><a href="">Meetings</a></li>
+            <li><a href="">Integrations</a></li>
+            <li><a href="">Changelog</a></li>
           </ul>
         </div>
+        <details class="footer-links">
+          <summary>Resources</summary>
+          <ul>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Customers</a></li>
+            <li><a href="">Enterprise</a></li>
+            <li><a href="">Help Center</a></li>
+          </ul>
+        </details>
+        <div class="footer-links-desktop">
+          <p>Resources</p>
+          <ul>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Customers</a></li>
+            <li><a href="">Enterprise</a></li>
+            <li><a href="">Help Center</a></li>
+          </ul>
+        </div>
+        <details class="footer-links">
+          <summary>Company</summary>
+          <ul>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Legal</a></li>
+            <li><a href="">Status</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </details>
+        <div class="footer-links-desktop">
+          <p>Company</p>
+          <ul>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Legal</a></li>
+            <li><a href="">Status</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
-    
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
   </body>
 </html>
