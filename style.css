@@ -5,7 +5,18 @@
 }
 :root {
   --nav-color: #f8f9fd;
-  --widht-section: 70%;
+  --width-section: 70%;
+}
+
+@media screen and (max-width: 720px) {
+  :root {
+    --width-section: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    --width-section: 90%;
+  }
 }
 main {
   background-color: #f8f9fd;
@@ -82,8 +93,7 @@ nav button {
   scale: 0.9;
 }
 @media screen and (min-width: 721px) {
-  nav .hamburger,
-  nav .mobile-menu-toggle {
+  nav .hamburger {
     display: none;
   }
 }
@@ -102,12 +112,6 @@ nav button {
     display: block;
     max-width: min(9rem, 55vw);
   }
-  nav .mobile-menu-toggle {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    opacity: 0;
-  }
   nav .hamburger {
     display: grid;
     place-items: center;
@@ -117,11 +121,12 @@ nav button {
     background-color: white;
     border: 1px solid #c9cbd3;
     border-radius: 0.5em;
-    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
-  nav .mobile-menu-toggle:checked ~ .mobile-menu {
-    position: absolute;
-    top: 100%;
+  nav:has(.mobile-menu:target) .mobile-menu {
+    position: fixed;
+    top: 3.5rem;
     left: 0;
     right: 0;
     display: flex;
@@ -227,6 +232,13 @@ nav button {
   color: white;
 }
 
+@media screen and (max-width: 720px) {
+  #hero .btn-group button {
+    font-size: 1em;
+    /* padding: 0.5em 1em; */
+  }
+}
+
 @media screen and (max-width: 360px) {
   #hero .btn-group {
     width: min(100%, 17rem);
@@ -243,7 +255,7 @@ nav button {
 
 #hero .carousel {
   margin: 5em auto 1em;
-  width: var(--widht-section);
+  width: var(--width-section);
   display: flex;
   overflow-x: auto;
   mask-image: linear-gradient(
@@ -305,7 +317,7 @@ nav button {
 
 /* ---------- MEETING SECTION --------- */
 section {
-  width: var(--widht-section);
+  max-width: var(--wi-section);
   margin: 0 auto;
   padding-bottom: 5em;
 }
@@ -338,26 +350,7 @@ section {
   }
 }
 
-@media screen and (max-width: 720px) {
-  .section-name {
-    font-size: 0.8em;
-  }
-  .section-title {
-    font-size: 1.5em;
-  }
-  .description {
-    font-size: 0.8em;
-  }
-  #hero h1 {
-    font-size: 2.5em;
-  }
-  #hero > p {
-    font-size: 0.75em;
-  }
-  #hero img.badge {
-    width: 11em;
-  }
-}
+
 @media screen and (max-width: 520px) {
   .section-name {
     font-size: 0.6em;
@@ -412,6 +405,18 @@ section {
   border-radius: 0.5em;
 }
 
+@media screen and (max-width: 720px) {
+  #meeting .img-container {
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #meeting .img-container {
+    height: 70vw;
+  }
+}
+
 #meeting .category-container {
   display: flex;
   flex-wrap: wrap;
@@ -435,6 +440,15 @@ section {
 }
 #meeting .category-container .meeting p {
   color: #5267e2;
+}
+
+@media screen and (max-width: 1020px) {
+  #meeting .category-container li p {
+    font-size: 1rem;
+  }
+  #meeting .category-container li svg{
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -475,6 +489,13 @@ section {
   width: auto;
 }
 
+@media screen and (max-width: 720px) {
+  #meeting .replace {
+    font-size: 1rem;
+  }
+  
+}
+
 @media screen and (max-width: 360px) {
   #meeting .replace {
     align-items: flex-start;
@@ -495,7 +516,7 @@ section {
   position: relative;
   line-height: 1.6;
   overflow-wrap: anywhere;
-}
+} 
 
 .checklist li::before {
   content: "";
@@ -523,6 +544,18 @@ section {
   justify-content: start;
 }
 
+@media screen and (max-width: 720px) {
+  #ai-teammate .container {
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ai-teammate .container {
+    height: 70vw;
+  }
+}
+
 #ai-teammate .container .card {
   width: 50%;
   height: 80%;
@@ -543,6 +576,7 @@ section {
   font-weight: 600;
   color: #0000006a;
 }
+
 
 #ai-teammate .container .btn-container {
   margin-top: 2vw;
@@ -574,6 +608,40 @@ section {
   box-shadow: 0px 1px 0px 1px white;
 }
 
+@media screen and (max-width: 720px) {
+  #ai-teammate .container .card p {
+    font-size: 3.2vw;
+  }
+  #ai-teammate .container .btn-container button {
+    width: 6vw;
+    height: 6vw;
+  }
+  #ai-teammate .container .btn-container button svg {
+    width: 3vw;
+    height: 3vw;
+  }
+  #ai-teammate .container .cta {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #ai-teammate .container .card p {
+    font-size: 4vw;
+  }
+  #ai-teammate .container .btn-container button {
+    width: 8vw;
+    height: 8vw;
+  }
+  #ai-teammate .container .btn-container button svg {
+    width: 4vw;
+    height: 4vw;
+  }
+  #ai-teammate .container .cta {
+    font-size: 3.5vw;
+  }
+}
+
 /* -------- Knowledge Section --------- */
 
 #knowledge .container {
@@ -582,6 +650,12 @@ section {
   overflow: hidden;
   border-radius: 0.7em;
   position: relative;
+}
+
+@media screen and (max-width: 720px) {
+  #knowledge .container {
+    height: 60vw;
+  }
 }
 #knowledge .checklist {
   list-style: none;
@@ -740,8 +814,8 @@ section {
 }
 
 @media screen and (max-width: 720px) {
-  #integrations .category-container li {
-    font-size: 0.8em;
+  #integrations .category-container li, #integrations .category-container li p {
+    font-size: 1em;
   }
 }
 
@@ -752,6 +826,18 @@ section {
   height: 52vw;
   margin: 2vw 0;
   border-radius: 0.5em;
+}
+
+@media screen and (max-width: 720px) {
+  #integrations .img-container {
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #integrations .img-container {
+    height: 70vw;
+  }
 }
 #integrations .img-container .bg {
   position: absolute;
@@ -877,6 +963,7 @@ section {
   align-items: center;
   padding: 0 1rem 20em;
 }
+
 #faq h2 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.6em;
@@ -912,6 +999,13 @@ section {
   line-height: 1.5;
   cursor: pointer;
   list-style: none;
+}
+
+@media screen and (max-width:720px) {
+  .faq-item summary {
+    padding: 1.25rem 2.75rem 1.25rem 0.5rem;
+    font-size: 1.2em;
+  }
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -1340,37 +1434,69 @@ footer .footer-links ul li a {
   }
 } */
 
+
 @media screen and (max-width: 720px) {
+    details.faq-item > summary {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+  }
+    details.faq-item > p {
+    font-size: clamp(0.8rem, 2.2vw, 1rem);
+  }
   .section-name {
-    font-size: 0.8em;
+    font-size: 1rem;
   }
   .section-title {
-    font-size: 1.5em;
+    font-size: 2.3rem;
   }
   .description {
-    font-size: 0.8em;
+    font-size: 1.2em;
+  }
+  #faq h2, #integrations h3.integration-count {
+    font-size: 2.3rem;
+  }
+  #integrations .integration-description {
+    font-size: 1.2em;
+  }
+  #faq p.description{
+    font-size: 1em;
   }
   #hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
   #hero > p {
-    font-size: 0.75em;
+    font-size: 1em;
+  }
+  #hero img.badge {
+    width: 15em;
+  }
+  .checklist li {
+    font-size: 1em;
+    font-weight: 500;  
+    color: #0000008d;
   }
 }
 @media screen and (max-width: 520px) {
+  details.faq-item > p {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+  }
   .section-name {
-    font-size: 0.6em;
+    font-size: 1em;
   }
   .section-title, #faq h2,#integrations h3.integration-count {
-    font-size: 1.2rem;
+    font-size: 2em;
   }
   .description, #integrations .integration-description {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   #hero h1 {
-    font-size: 2.3em;
+    font-size: 4em;
   }
   #hero > p {
-    font-size: 0.7em;
+    font-size: 1em;
+  }
+  #hero .btn-demo,
+  #hero .btn-try {
+    font-size: 0.3em;
+    padding: 0.3em 0.6em;
   }
 }
