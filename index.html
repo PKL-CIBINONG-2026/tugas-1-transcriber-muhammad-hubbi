@@ -50,16 +50,7 @@
         <button class="login-btn">Log in</button>
         <button class="signup-btn">Sign up<span></span></button>
       </div>
-      <input
-        class="mobile-menu-toggle"
-        id="mobile-menu-toggle"
-        type="checkbox"
-      />
-      <label
-        class="hamburger"
-        for="mobile-menu-toggle"
-        aria-label="Toggle navigation menu"
-      >
+      <a class="hamburger" href="#mobile-menu" aria-label="Open navigation menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -76,8 +67,8 @@
             d="m2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
           />
         </svg>
-      </label>
-      <div class="mobile-menu" id="mobile-menu">
+      </a>
+      <div class="mobile-menu" id="mobile-menu" tabindex="-1">
         <ul>
           <li><a href="#hero">Product</a></li>
           <li><a href="#meeting">Resource</a></li>
@@ -281,7 +272,7 @@
         <div class="container">
           <div class="card">
             <img src="/img/ai-teammate-effect.svg" alt="" />
-            <p>Waking Up...</p>
+            <p>Waking Up...</p> 
             <div class="btn-container">
               <button>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
