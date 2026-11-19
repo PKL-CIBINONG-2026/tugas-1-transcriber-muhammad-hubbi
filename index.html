@@ -35,7 +35,7 @@
   </head>
   <body>
     <!-- ---------- NAVBAR ---------- -->
-    <nav>
+    <nav id="mobile-nav">
       <div class="icon-nav">
         <img src="./img/transcriber-logo.svg" alt="" />
       </div>
@@ -48,9 +48,9 @@
       </ul>
       <div class="auth-group">
         <button class="login-btn">Log in</button>
-        <button class="signup-btn">Sign up<span></span></button>
+        <button class="signup-btn">Sign up</button>
       </div>
-      <a class="hamburger" href="#mobile-menu" aria-label="Open navigation menu">
+      <a class="hamburger" href="#mobile-menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
@@ -66,6 +66,12 @@
             stroke-width="1.5"
             d="m2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
           />
+        </svg>
+      </a>
+      <a class="hamburger hamburger-close" href="#mobile-nav" aria-label="Close navigation menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M0 0h16v16H0z" fill="none" />
+          <path d="m4 4 8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" />
         </svg>
       </a>
       <div class="mobile-menu" id="mobile-menu" tabindex="-1">
